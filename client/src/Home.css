@@ -1,0 +1,100 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial, sans-serif';
+  color: #2c3e50;
+}
+
+.header {
+  margin-bottom: 40px;
+  padding: 30px 20px;
+}
+
+.main-title {
+  font-size: 2.5em;
+  color: #1a202c;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 1.2em;
+  color: #4a5568;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navigation {
+  margin-bottom: 40px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.nav-link {
+  color: #2980b9;
+  font-size: 1.1em;
+}
+
+.nav-link:hover {
+  color: #1abc9c;
+}
+
+.features {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.features h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a202c;
+  color: #fff;
+  border-radius: 8px;
+}

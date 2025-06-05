@@ -1,0 +1,23 @@
+.navbar {
+  height: 60px;
+  background-color: #0A0A23;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* ...existing code... */
+}
+
+.search-bar input {
+  background-color: #1A1A40;
+  border: none;
+  padding: 8px;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
