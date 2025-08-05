@@ -1,41 +1,63 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
   return (
-    <div className="home-container">
+    <div className="home-container fade-in">
       <header className="header">
         <h1 className="main-title">CYBER.AI</h1>
         <p className="project-description">
-          Welcome to the AI-Integrated Cybersecurity Threat Detection System. Our platform provides advanced tools for URL Analysis, Log Analysis, Image Analysis ,File Integrity to detect potential security threats. Navigate through the options below to get started.
+          Advanced AI-Integrated Cybersecurity Threat Detection Platform. 
+          Protect your digital assets with cutting-edge machine learning algorithms 
+          for comprehensive security analysis and real-time threat detection.
         </p>
       </header>
+      
       <nav className="navigation">
         <ul className="nav-links">
           <li>
-            <Link to="/url-analysis" className="nav-link">URL Analysis</Link>
+            <Link to="/url-analysis" className="nav-link">
+              <h3>🔗 URL Analysis</h3>
+              <p>Detect phishing and malicious URLs using advanced ML models</p>
+            </Link>
           </li>
           <li>
-            <Link to="/log-analysis" className="nav-link">Log Analysis</Link>
+            <Link to="/log-analysis" className="nav-link">
+              <h3>📋 Log Analysis</h3>
+              <p>Analyze system logs for security anomalies and threats</p>
+            </Link>
           </li>
           <li>
-            <Link to="/file-integrity" className="nav-link">File Integrity</Link>
+            <Link to="/file-integrity" className="nav-link">
+              <h3>🛡️ File Integrity</h3>
+              <p>Monitor and verify file integrity with hash analysis</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/image-analysis" className="nav-link">
+              <h3>🖼️ Image Analysis</h3>
+              <p>Forensic image analysis with metadata extraction</p>
+            </Link>
           </li>
         </ul>
       </nav>
+      
       <section className="features">
-        <h2>Features</h2>
+        <h2>Platform Features</h2>
         <ul>
-          <li>Forensic Image Analysis</li>
-          <li>URL Analysis</li>
-          <li>Log Analysis</li>
-          <li>File Integrity Monitoring</li>
-          <li>Detailed reporting and alerts</li>
+          <li>Real-time Threat Detection</li>
+          <li>Machine Learning-Powered Analysis</li>
+          <li>Comprehensive Security Monitoring</li>
+          <li>Advanced Forensic Capabilities</li>
+          <li>Detailed Security Reports</li>
+          <li>Enterprise-Grade Security</li>
         </ul>
       </section>
+      
       <footer className="footer">
-        <p>&copy; 2024 AI-Integrated Cybersecurity Threat Detection System. All rights reserved.</p>
+        <p>&copy; 2024 CYBER.AI - Advanced Cybersecurity Platform. All rights reserved.</p>
       </footer>
     </div>
   );

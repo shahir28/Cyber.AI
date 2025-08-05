@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import axios from "axios";
 import "./URLAnalysis.css";
@@ -6,6 +7,7 @@ function URLAnalysis() {
   const [text, setText] = useState("");
   const [response, setResponse] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,8 +16,11 @@ function URLAnalysis() {
       setError("Please enter a URL to analyze.");
       return;
     }
+    
     setError("");
-    setResponse("Loading...");
+    setLoading(true);
+    setResponse("Analyzing URL...");
+    
     try {
       console.log('Sending URL for analysis:', trimmedText);
       const res = await axios.post(
@@ -31,34 +36,42 @@ function URLAnalysis() {
       );
       console.log('Received response:', res.data);
       const result = res.data[0];
-      setResponse(result.label === 'bad' ? 'Bad (Phishing)' : 'Good (Safe)');
+      setResponse(result.label === 'bad' ? '🚫 Bad (Phishing Detected)' : '✅ Good (Safe URL)');
     } catch (error) {
       console.error("Detailed error:", error);
-      setError("Failed to analyze URL. Please try again.");
+      setError("Failed to analyze URL. Please check your connection and try again.");
       setResponse("");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="url-analysis-container">
-      <h1>URL Analysis</h1>
-      <form onSubmit={handleSubmit} className="url-analysis-form">
-        <label htmlFor="text-input">Enter URL for Analysis:</label>
+      <h1>URL Security Analysis</h1>
+      
+      <form onSubmit={handleSubmit} className="url-analysis-form fade-in">
+        <label htmlFor="text-input">Enter URL for Security Analysis:</label>
         <textarea
           id="text-input"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Type your URL here..."
-          rows="5"
-          cols="50"
+          placeholder="https://example.com or paste suspicious URL here..."
+          rows="6"
+          disabled={loading}
         />
-        {error && <p className="error">{error}</p>}
-        <button type="submit">Analyze</button>
+        {error && <div className="error">{error}</div>}
+        <button type="submit" disabled={loading}>
+          {loading ? 'Analyzing...' : 'Analyze URL'}
+        </button>
       </form>
+      
       {response && (
-        <div className="response">
-          <h2>Analysis Result:</h2>
-          <p>{response}</p>
+        <div className="response slide-up">
+          <h2>Security Analysis Result</h2>
+          <p className={response.includes('Good') ? 'status-good' : response.includes('Bad') ? 'status-danger' : ''}>
+            {response}
+          </p>
         </div>
       )}
     </div>
