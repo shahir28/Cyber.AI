@@ -7,8 +7,12 @@ channel = "stable-25_05"
 localPort = 3000
 externalPort = 80
 
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
 [workflows]
-runButton = "Start Next.js App"
+runButton = "Start Frontend"
 
 [[workflows.workflow]]
 name = "Start Next.js App"
@@ -18,3 +22,47 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm install && npm run dev"
+
+[[workflows.workflow]]
+name = "Start Frontend"
+author = 45991209
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd client && npm install && npm start"
+
+[[workflows.workflow]]
+name = "Start Backend"
+author = 45991209
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd server && npm install && npm start"
+
+[[workflows.workflow]]
+name = "Start ML Service"
+author = 45991209
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd ml-model && pip install -r requirements.txt && python app.py"
+
+[[workflows.workflow]]
+name = "Start All Services"
+author = 45991209
+mode = "parallel"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd client && npm install && npm start"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd server && npm install && npm start"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd ml-model && pip install -r requirements.txt && python app.py"
