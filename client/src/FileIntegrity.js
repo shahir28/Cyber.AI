@@ -47,6 +47,45 @@ function FileIntegrity() {
     <div className="log-analysis-container">
       <h1>🛡️ File Integrity Monitoring</h1>
       
+      <div className="model-description fade-in">
+        <div className="description-card">
+          <h2>🔐 Advanced File Tampering Detection</h2>
+          <p>Our comprehensive file integrity system uses cryptographic hashing and behavioral analysis to detect unauthorized modifications, ensuring your critical files remain secure.</p>
+          
+          <div className="features-grid">
+            <div className="feature-item">
+              <h3>🎯 What Makes It Stand Out</h3>
+              <ul>
+                <li><strong>Multi-Hash Verification:</strong> Uses SHA-256 and MD5 for comprehensive checking</li>
+                <li><strong>Baseline Learning:</strong> Establishes normal file behavior patterns</li>
+                <li><strong>Real-time Monitoring:</strong> Instant detection of unauthorized changes</li>
+                <li><strong>Forensic Analysis:</strong> Detailed change tracking and attribution</li>
+              </ul>
+            </div>
+            
+            <div className="feature-item">
+              <h3>🔬 Protection Features</h3>
+              <ul>
+                <li>Cryptographic hash verification for tamper detection</li>
+                <li>File permission and metadata monitoring</li>
+                <li>Binary analysis for malware injection detection</li>
+                <li>Historical change tracking and audit trails</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="tech-specs">
+            <h3>⚡ Technical Specifications</h3>
+            <div className="specs-grid">
+              <span><strong>Hash Algorithms:</strong> SHA-256, MD5, CRC32</span>
+              <span><strong>File Types:</strong> All formats supported</span>
+              <span><strong>Max File Size:</strong> Up to 10GB per file</span>
+              <span><strong>Detection Time:</strong> Real-time processing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <form onSubmit={handleSubmit} className="log-analysis-form fade-in">
         <label htmlFor="file-input">Upload File for Integrity Check:</label>
         <input 

@@ -1,4 +1,3 @@
-
 .url-analysis-container {
   min-height: 100vh;
   padding: 2rem;
@@ -214,21 +213,126 @@
   .url-analysis-container {
     padding: 1rem;
   }
-  
+
   .url-analysis-container h1 {
     font-size: 2rem;
   }
-  
+
   .url-analysis-form {
     padding: 2rem;
   }
-  
+
   .url-analysis-form button {
     width: 100%;
     padding: 1.25rem;
   }
-  
+
   .response {
     padding: 2rem;
   }
+}
+
+/* Model Description Styles */
+.model-description {
+  margin-bottom: 2rem;
+}
+
+.description-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.description-card h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.description-card p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.feature-item h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.feature-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item li {
+  color: var(--secondary-text);
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.feature-item li::before {
+  content: '▶';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+.feature-item li strong {
+  color: var(--primary-text);
+}
+
+.tech-specs {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.tech-specs h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.specs-grid span {
+  color: var(--secondary-text);
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.specs-grid span strong {
+  color: var(--primary-text);
 }

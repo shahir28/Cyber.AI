@@ -47,6 +47,45 @@ function ImageAnalysis() {
     <div className="log-analysis-container">
       <h1>🖼️ Forensic Image Analysis</h1>
       
+      <div className="model-description fade-in">
+        <div className="description-card">
+          <h2>🔍 Digital Forensics & Metadata Extraction</h2>
+          <p>Our advanced image forensics system combines metadata analysis, steganography detection, and tampering identification to provide comprehensive digital evidence analysis.</p>
+          
+          <div className="features-grid">
+            <div className="feature-item">
+              <h3>🎯 What Makes It Stand Out</h3>
+              <ul>
+                <li><strong>EXIF Deep Analysis:</strong> Extracts and analyzes comprehensive metadata</li>
+                <li><strong>Tampering Detection:</strong> Identifies digital manipulation and editing</li>
+                <li><strong>Steganography Scanning:</strong> Detects hidden data within images</li>
+                <li><strong>Chain of Custody:</strong> Maintains forensic integrity standards</li>
+              </ul>
+            </div>
+            
+            <div className="feature-item">
+              <h3>🔬 Analysis Capabilities</h3>
+              <ul>
+                <li>Camera fingerprinting and device identification</li>
+                <li>Timestamp verification and geolocation extraction</li>
+                <li>Image manipulation detection (copy-move, splicing)</li>
+                <li>Compression artifacts and quality analysis</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="tech-specs">
+            <h3>⚡ Technical Specifications</h3>
+            <div className="specs-grid">
+              <span><strong>Supported Formats:</strong> JPEG, PNG, TIFF, RAW, HEIC</span>
+              <span><strong>Hash Generation:</strong> SHA-256, MD5, Perceptual</span>
+              <span><strong>Metadata Standards:</strong> EXIF, IPTC, XMP</span>
+              <span><strong>Max Resolution:</strong> Up to 100MP images</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <form onSubmit={handleSubmit} className="log-analysis-form fade-in">
         <label htmlFor="file-input">Upload Image for Forensic Analysis:</label>
         <input 
