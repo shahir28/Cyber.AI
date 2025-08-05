@@ -1,0 +1,36 @@
+
+{
+  "name": "cyber-ai-platform",
+  "version": "1.0.0",
+  "description": "Advanced AI-Integrated Cybersecurity Threat Detection Platform",
+  "main": "index.js",
+  "scripts": {
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install", 
+    "install:ml": "cd ml-model && pip install -r requirements.txt",
+    "install:all": "npm run install:client && npm run install:server && npm run install:ml",
+    "dev:client": "cd client && npm start",
+    "dev:server": "cd server && npm start",
+    "dev:ml": "cd ml-model && python app.py",
+    "build:client": "cd client && npm run build",
+    "start": "npm run dev:client"
+  },
+  "keywords": [
+    "cybersecurity",
+    "ai",
+    "machine-learning", 
+    "threat-detection",
+    "phishing",
+    "security"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cyber-ai-platform.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  }
+}
