@@ -48,7 +48,7 @@ function URLAnalysis() {
 
   return (
     <div className="url-analysis-container">
-      <h1>🔗 URL Security Analysis</h1>
+      <h1> URL Security Analysis</h1>
       
       <div className="model-description fade-in">
         <div className="description-card">
