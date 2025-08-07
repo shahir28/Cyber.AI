@@ -45,7 +45,7 @@ function FileIntegrity() {
 
   return (
     <div className="log-analysis-container">
-      <h1>🛡️ File Integrity Monitoring</h1>
+      <h1> File Integrity Monitoring</h1>
       
       <div className="model-description fade-in">
         <div className="description-card">
