@@ -51,7 +51,7 @@ function LogAnalysis() {
 
   return (
     <div className="log-analysis-container">
-      <h1>📊 Security Log Analysis</h1>
+      <h1> Security Log Analysis</h1>
       
       <div className="model-description fade-in">
         <div className="description-card">
